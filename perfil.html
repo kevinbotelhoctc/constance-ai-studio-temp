@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Constance AI - Profile Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec13b6",
+                        "background-light": "#f5f5f7",
+                        "background-dark": "#1a1028",
+                        "charcoal": "#1d1d1f",
+                        "slate": "#6e6e73",
+                        "mist": "#e5e5e7",
+                        "danger": "#ff3b30",
+                        "blush": "#fce4f4"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            color: #ec13b6;
+            background-color: rgba(236, 19, 182, 0.1);
+            border-radius: 0.75rem;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-charcoal">
+<div class="flex h-screen overflow-hidden">
+<!-- Collapsed Sidebar -->
+<aside class="w-16 flex flex-col items-center py-8 bg-[#1a1028] text-white/70">
+<div class="mb-10">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-2xl">auto_awesome</span>
+</div>
+</div>
+<nav class="flex flex-col gap-6 flex-1">
+<button class="p-2 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[28px]">home</span>
+</button>
+<button class="p-2 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[28px]">auto_awesome</span>
+</button>
+<button class="p-2 text-primary bg-primary/10 rounded-xl">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</button>
+</nav>
+<div class="mt-auto">
+<button class="p-2 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[28px]">settings</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto p-8 lg:p-12">
+<!-- Header Section -->
+<header class="mb-12 max-w-2xl mx-auto w-full">
+<h1 class="text-4xl font-extrabold text-charcoal tracking-tight mb-1">Meu Perfil</h1>
+<p class="text-slate text-lg font-medium">Informações da sua loja</p>
+</header>
+<!-- Profile Card -->
+<section class="max-w-[600px] mx-auto">
+<div class="bg-white rounded-2xl shadow-sm border border-mist overflow-hidden">
+<!-- Top Profile Branding -->
+<div class="pt-10 pb-8 flex flex-col items-center border-b border-mist/50">
+<div class="w-24 h-24 rounded-full bg-blush flex items-center justify-center text-primary text-3xl font-bold mb-4 border-4 border-white shadow-sm">
+                            AB
+                        </div>
+<h2 class="text-2xl font-bold text-charcoal">Ana Beatriz Silva</h2>
+<div class="mt-2 px-4 py-1 bg-blush text-primary text-sm font-bold rounded-full uppercase tracking-wider">
+                            Plano Premium
+                        </div>
+</div>
+<!-- Information List -->
+<div class="px-8 py-4">
+<!-- Item 1 -->
+<div class="py-5 flex items-start gap-4">
+<div class="mt-1">
+<span class="material-symbols-outlined text-slate">store</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-bold text-slate uppercase tracking-widest mb-1">Nome da Loja</p>
+<p class="text-charcoal font-semibold text-lg">Constance Shopping Iguatemi</p>
+</div>
+</div>
+<div class="h-px bg-mist/60 w-full"></div>
+<!-- Item 2 -->
+<div class="py-5 flex items-start gap-4">
+<div class="mt-1">
+<span class="material-symbols-outlined text-slate">person</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-bold text-slate uppercase tracking-widest mb-1">Proprietária</p>
+<p class="text-charcoal font-semibold text-lg">Ana Beatriz Silva</p>
+</div>
+</div>
+<div class="h-px bg-mist/60 w-full"></div>
+<!-- Item 3 -->
+<div class="py-5 flex items-start gap-4">
+<div class="mt-1">
+<span class="material-symbols-outlined text-slate">mail</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-bold text-slate uppercase tracking-widest mb-1">E-mail</p>
+<p class="text-charcoal font-semibold text-lg">anabeatriz@constance.com.br</p>
+</div>
+</div>
+<div class="h-px bg-mist/60 w-full"></div>
+<!-- Item 4 -->
+<div class="py-5 flex items-start gap-4">
+<div class="mt-1">
+<span class="material-symbols-outlined text-slate">location_on</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-bold text-slate uppercase tracking-widest mb-1">Cidade</p>
+<p class="text-charcoal font-semibold text-lg">São Paulo, SP</p>
+</div>
+</div>
+<div class="h-px bg-mist/60 w-full"></div>
+<!-- Item 5 -->
+<div class="py-5 flex items-start gap-4">
+<div class="mt-1">
+<span class="material-symbols-outlined text-slate">calendar_today</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-bold text-slate uppercase tracking-widest mb-1">Franqueada desde</p>
+<p class="text-charcoal font-semibold text-lg">Janeiro 2023</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Logout Button -->
+<div class="mt-12 flex justify-center">
+<button class="flex items-center gap-2 px-8 py-3 border-2 border-danger text-danger font-bold rounded-full hover:bg-danger/5 transition-all">
+<span class="material-symbols-outlined">logout</span>
+<span>Sair</span>
+</button>
+</div>
+</section>
+<!-- Support Footer Text -->
+<footer class="mt-16 text-center">
+<p class="text-slate/60 text-sm">Constance AI Studio © 2024 • Suporte ao Franqueado</p>
+</footer>
+</main>
+</div>
+<script src="nav.js"></script></body></html>

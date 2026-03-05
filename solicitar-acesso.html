@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Constance AI - Solicitar Acesso</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec13b6",
+                        "background-light": "#f5f5f7",
+                        "background-dark": "#22101d",
+                        "warm-charcoal": "#1d1d1f",
+                        "cool-slate": "#6e6e73",
+                        "mist-gray": "#e5e5ea"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-6">
+<!-- Central Registration Card -->
+<div class="w-full max-w-[480px] bg-white dark:bg-slate-900 rounded-xl shadow-xl shadow-primary/5 border border-mist-gray dark:border-slate-800 overflow-hidden">
+<!-- Header / Logo Area -->
+<div class="px-8 pt-10 pb-6 text-center">
+<div class="flex items-center justify-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">auto_awesome</span>
+<h1 class="text-2xl font-display tracking-tight">
+<span class="font-bold text-primary">Constance</span>
+<span class="font-light text-warm-charcoal dark:text-slate-100">AI Studio</span>
+</h1>
+</div>
+<h2 class="text-2xl font-bold text-warm-charcoal dark:text-slate-100 mb-2">Solicitar Acesso</h2>
+<p class="text-cool-slate dark:text-slate-400 text-sm">Preencha seus dados para solicitar acesso à plataforma</p>
+</div>
+<!-- Form Section -->
+<form class="px-8 pb-10 flex flex-col gap-4">
+<!-- Nome da Proprietária -->
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-semibold text-warm-charcoal dark:text-slate-300 ml-1">Nome da Proprietária</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-cool-slate group-focus-within:text-primary transition-colors text-[20px]">person</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 bg-white dark:bg-slate-800 border border-mist-gray dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-warm-charcoal dark:text-slate-100 placeholder:text-cool-slate/50" placeholder="Nome completo" type="text"/>
+</div>
+</div>
+<!-- Nome da Loja -->
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-semibold text-warm-charcoal dark:text-slate-300 ml-1">Nome da Loja</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-cool-slate group-focus-within:text-primary transition-colors text-[20px]">store</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 bg-white dark:bg-slate-800 border border-mist-gray dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-warm-charcoal dark:text-slate-100 placeholder:text-cool-slate/50" placeholder="Ex: Constance Shopping Iguatemi" type="text"/>
+</div>
+</div>
+<!-- E-mail -->
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-semibold text-warm-charcoal dark:text-slate-300 ml-1">E-mail</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-cool-slate group-focus-within:text-primary transition-colors text-[20px]">mail</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 bg-white dark:bg-slate-800 border border-mist-gray dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-warm-charcoal dark:text-slate-100 placeholder:text-cool-slate/50" placeholder="seu@email.com.br" type="email"/>
+</div>
+</div>
+<!-- Senha -->
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-semibold text-warm-charcoal dark:text-slate-300 ml-1">Senha</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-cool-slate group-focus-within:text-primary transition-colors text-[20px]">lock</span>
+</div>
+<input class="w-full pl-10 pr-12 py-3 bg-white dark:bg-slate-800 border border-mist-gray dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-warm-charcoal dark:text-slate-100 placeholder:text-cool-slate/50" placeholder="Crie uma senha" type="password"/>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer">
+<span class="material-symbols-outlined text-cool-slate hover:text-primary transition-colors text-[20px]">visibility</span>
+</div>
+</div>
+</div>
+<!-- WhatsApp -->
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-semibold text-warm-charcoal dark:text-slate-300 ml-1">WhatsApp</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-cool-slate group-focus-within:text-primary transition-colors text-[20px]">phone</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 bg-white dark:bg-slate-800 border border-mist-gray dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-warm-charcoal dark:text-slate-100 placeholder:text-cool-slate/50" placeholder="(00) 00000-0000" type="tel"/>
+</div>
+</div>
+<!-- Cidade / Estado -->
+<div class="flex flex-col gap-1.5 mb-2">
+<label class="text-xs font-semibold text-warm-charcoal dark:text-slate-300 ml-1">Cidade / Estado</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-cool-slate group-focus-within:text-primary transition-colors text-[20px]">location_on</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 bg-white dark:bg-slate-800 border border-mist-gray dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-warm-charcoal dark:text-slate-100 placeholder:text-cool-slate/50" placeholder="Ex: São Paulo, SP" type="text"/>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="mt-4 flex flex-col gap-6">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-full shadow-lg shadow-primary/20 transition-all active:scale-[0.98]" type="submit">
+                    Solicitar Acesso
+                </button>
+<div class="text-center">
+<a class="text-primary font-semibold text-sm hover:underline underline-offset-4 decoration-primary/30" href="#">
+                        Já tenho acesso — Fazer login
+                    </a>
+</div>
+</div>
+</form>
+</div>
+<!-- Decorative Elements (Optional for high-end feel) -->
+<div class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20"></div>
+<script src="nav.js"></script></body></html>

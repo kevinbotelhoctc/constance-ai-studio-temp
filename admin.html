@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Fila de Aprovações - Constance AI Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec13b6",
+                        "background-light": "#f5f5f7",
+                        "background-dark": "#1a1028",
+                        "sidebar": "#1a1028",
+                        "warm-charcoal": "#2d2d2d",
+                        "cool-slate": "#64748b",
+                        "gentle-mist": "#e2e8f0",
+                        "soft-blush": "#fce4f4",
+                        "warm-amber": "#ff9500"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="flex min-h-screen">
+<!-- Sidebar: Collapsed 64px -->
+<aside class="w-16 bg-sidebar flex flex-col items-center py-8 gap-8 border-r border-white/5 flex-shrink-0 sticky top-0 h-screen">
+<div class="mb-4">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">C</div>
+</div>
+<nav class="flex flex-col gap-6 flex-1">
+<a class="group relative flex items-center justify-center p-2 rounded-xl bg-primary text-white shadow-lg shadow-primary/20" href="#">
+<span class="material-symbols-outlined active-icon">assignment</span>
+<span class="absolute left-16 bg-sidebar text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50">Fila de Aprovações</span>
+</a>
+<a class="group relative flex items-center justify-center p-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="absolute left-16 bg-sidebar text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50">Franqueados</span>
+</a>
+</nav>
+<div class="mt-auto">
+<a class="group relative flex items-center justify-center p-2 rounded-xl text-slate-400 hover:text-red-400 hover:bg-red-400/10 transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="absolute left-16 bg-sidebar text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50">Sair</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 p-8 overflow-y-auto">
+<!-- Header -->
+<header class="mb-10">
+<h1 class="text-3xl font-extrabold text-warm-charcoal dark:text-white tracking-tight">Fila de Aprovações</h1>
+<p class="text-cool-slate mt-1 text-lg">
+<span class="font-bold text-primary">8</span> posts aguardando aprovação
+                </p>
+</header>
+<!-- Approval Queue List -->
+<div class="max-w-5xl flex flex-col gap-4">
+<!-- Card 1 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl p-4 flex items-center gap-6 shadow-sm border border-gentle-mist dark:border-slate-700 hover:shadow-md transition-shadow">
+<div class="w-16 h-16 rounded-lg bg-gradient-to-br from-primary/40 to-primary/10 flex-shrink-0 overflow-hidden" data-alt="Soft fuchsia and pink abstract gradient pattern">
+<div class="w-full h-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/40">image</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-warm-charcoal dark:text-slate-100 font-semibold truncate text-lg">Constance Shopping Iguatemi</h3>
+<p class="text-cool-slate text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                            São Paulo, SP
+                        </p>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex flex-col items-end gap-1">
+<span class="px-3 py-1 bg-soft-blush text-primary text-xs font-bold rounded-full uppercase tracking-wider">Carrossel</span>
+<span class="text-cool-slate text-xs">04/03/2026</span>
+</div>
+<div class="min-w-[100px] flex justify-end">
+<span class="px-4 py-1.5 bg-warm-amber text-white text-sm font-medium rounded-full">Pendente</span>
+</div>
+<button class="p-2 text-cool-slate hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl p-4 flex items-center gap-6 shadow-sm border border-gentle-mist dark:border-slate-700 hover:shadow-md transition-shadow">
+<div class="w-16 h-16 rounded-lg bg-gradient-to-br from-primary/40 to-primary/10 flex-shrink-0 overflow-hidden" data-alt="Soft pink and purple abstract gradient pattern">
+<div class="w-full h-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/40">aspect_ratio</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-warm-charcoal dark:text-slate-100 font-semibold truncate text-lg">Constance Barra Shopping</h3>
+<p class="text-cool-slate text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                            Rio de Janeiro, RJ
+                        </p>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex flex-col items-end gap-1">
+<span class="px-3 py-1 bg-soft-blush text-primary text-xs font-bold rounded-full uppercase tracking-wider">Post 1:1</span>
+<span class="text-cool-slate text-xs">04/03/2026</span>
+</div>
+<div class="min-w-[100px] flex justify-end">
+<span class="px-4 py-1.5 bg-warm-amber text-white text-sm font-medium rounded-full">Pendente</span>
+</div>
+<button class="p-2 text-cool-slate hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl p-4 flex items-center gap-6 shadow-sm border border-gentle-mist dark:border-slate-700 hover:shadow-md transition-shadow">
+<div class="w-16 h-16 rounded-lg bg-gradient-to-br from-primary/40 to-primary/10 flex-shrink-0 overflow-hidden" data-alt="Fuchsia and soft rose abstract gradient pattern">
+<div class="w-full h-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/40">smartphone</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-warm-charcoal dark:text-slate-100 font-semibold truncate text-lg">Constance Park Shopping</h3>
+<p class="text-cool-slate text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                            Brasília, DF
+                        </p>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex flex-col items-end gap-1">
+<span class="px-3 py-1 bg-soft-blush text-primary text-xs font-bold rounded-full uppercase tracking-wider">Story 9:16</span>
+<span class="text-cool-slate text-xs">04/03/2026</span>
+</div>
+<div class="min-w-[100px] flex justify-end">
+<span class="px-4 py-1.5 bg-warm-amber text-white text-sm font-medium rounded-full">Pendente</span>
+</div>
+<button class="p-2 text-cool-slate hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl p-4 flex items-center gap-6 shadow-sm border border-gentle-mist dark:border-slate-700 hover:shadow-md transition-shadow">
+<div class="w-16 h-16 rounded-lg bg-gradient-to-br from-primary/40 to-primary/10 flex-shrink-0 overflow-hidden" data-alt="Elegant fuchsia and lavender gradient background">
+<div class="w-full h-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/40">image</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-warm-charcoal dark:text-slate-100 font-semibold truncate text-lg">Constance Shopping Morumbi</h3>
+<p class="text-cool-slate text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                            São Paulo, SP
+                        </p>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex flex-col items-end gap-1">
+<span class="px-3 py-1 bg-soft-blush text-primary text-xs font-bold rounded-full uppercase tracking-wider">Carrossel</span>
+<span class="text-cool-slate text-xs">04/03/2026</span>
+</div>
+<div class="min-w-[100px] flex justify-end">
+<span class="px-4 py-1.5 bg-warm-amber text-white text-sm font-medium rounded-full">Pendente</span>
+</div>
+<button class="p-2 text-cool-slate hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl p-4 flex items-center gap-6 shadow-sm border border-gentle-mist dark:border-slate-700 hover:shadow-md transition-shadow">
+<div class="w-16 h-16 rounded-lg bg-gradient-to-br from-primary/40 to-primary/10 flex-shrink-0 overflow-hidden" data-alt="Minimalist soft pink gradient image placeholder">
+<div class="w-full h-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/40">aspect_ratio</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-warm-charcoal dark:text-slate-100 font-semibold truncate text-lg">Constance Norte Shopping</h3>
+<p class="text-cool-slate text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                            Fortaleza, CE
+                        </p>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex flex-col items-end gap-1">
+<span class="px-3 py-1 bg-soft-blush text-primary text-xs font-bold rounded-full uppercase tracking-wider">Post 1:1</span>
+<span class="text-cool-slate text-xs">04/03/2026</span>
+</div>
+<div class="min-w-[100px] flex justify-end">
+<span class="px-4 py-1.5 bg-warm-amber text-white text-sm font-medium rounded-full">Pendente</span>
+</div>
+<button class="p-2 text-cool-slate hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl p-4 flex items-center gap-6 shadow-sm border border-gentle-mist dark:border-slate-700 hover:shadow-md transition-shadow">
+<div class="w-16 h-16 rounded-lg bg-gradient-to-br from-primary/40 to-primary/10 flex-shrink-0 overflow-hidden" data-alt="Light fuchsia aesthetic gradient pattern design">
+<div class="w-full h-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/40">smartphone</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-warm-charcoal dark:text-slate-100 font-semibold truncate text-lg">Constance Shopping Recife</h3>
+<p class="text-cool-slate text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                            Recife, PE
+                        </p>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex flex-col items-end gap-1">
+<span class="px-3 py-1 bg-soft-blush text-primary text-xs font-bold rounded-full uppercase tracking-wider">Story 9:16</span>
+<span class="text-cool-slate text-xs">04/03/2026</span>
+</div>
+<div class="min-w-[100px] flex justify-end">
+<span class="px-4 py-1.5 bg-warm-amber text-white text-sm font-medium rounded-full">Pendente</span>
+</div>
+<button class="p-2 text-cool-slate hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Empty padding at bottom for scroll breathing room -->
+<div class="h-16"></div>
+</main>
+</div>
+<script src="nav.js"></script></body></html>

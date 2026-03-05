@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec13b6",
+                        "background-light": "#f5f5f7",
+                        "background-dark": "#22101d",
+                        "slate-gray": "#6e6e73",
+                        "warm-charcoal": "#1d1d1f",
+                        "mist-gray": "#e5e5ea"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.75rem", // 12px for the card
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Constance AI - Login</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex items-center justify-center p-4">
+<div class="w-full max-w-[420px] bg-white dark:bg-slate-900 rounded shadow-xl border border-mist-gray dark:border-primary/20 p-8 flex flex-col items-center">
+<!-- Logo Area -->
+<div class="flex flex-col items-center gap-2 mb-8 text-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">auto_awesome</span>
+<h1 class="text-3xl tracking-tight">
+<span class="font-extrabold text-primary">Constance</span>
+<span class="font-light text-warm-charcoal dark:text-slate-100">AI Studio</span>
+</h1>
+</div>
+<p class="text-slate-gray dark:text-slate-400 text-sm font-medium">Bem-vinda ao seu estúdio criativo</p>
+</div>
+<!-- Form Area -->
+<form class="w-full space-y-5" onsubmit="return false;">
+<!-- E-mail Input -->
+<div class="flex flex-col gap-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-slate-gray dark:text-slate-400 px-1">E-mail</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-gray group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<input class="w-full pl-11 pr-4 py-3.5 bg-white dark:bg-slate-800 border border-mist-gray dark:border-slate-700 rounded-lg text-warm-charcoal dark:text-slate-100 placeholder:text-slate-gray/50 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm" placeholder="seu@email.com.br" type="email"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="flex flex-col gap-2">
+<label class="text-xs font-semibold uppercase tracking-wider text-slate-gray dark:text-slate-400 px-1">Senha</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-gray group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<input class="w-full pl-11 pr-12 py-3.5 bg-white dark:bg-slate-800 border border-mist-gray dark:border-slate-700 rounded-lg text-warm-charcoal dark:text-slate-100 placeholder:text-slate-gray/50 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm" placeholder="Sua senha" type="password"/>
+<div class="absolute inset-y-0 right-0 pr-4 flex items-center cursor-pointer text-slate-gray hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</div>
+</div>
+</div>
+<!-- CTA Button -->
+<div class="pt-2">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-full shadow-lg shadow-primary/20 transition-all active:scale-[0.98] text-base tracking-wide" type="submit">
+                    Entrar
+                </button>
+</div>
+<!-- Request Access Link -->
+<div class="text-center pt-2">
+<a class="text-primary hover:text-primary/80 text-sm font-semibold transition-colors underline decoration-primary/30 underline-offset-4" href="#">
+                    Solicitar acesso
+                </a>
+</div>
+</form>
+<!-- Footer / Disclaimer -->
+<div class="mt-10 pt-6 border-t border-mist-gray dark:border-slate-800 w-full flex items-center justify-center gap-2 text-slate-gray dark:text-slate-500">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<p class="text-[11px] leading-tight text-center">
+                O acesso é liberado manualmente pela equipe Constance.
+            </p>
+</div>
+</div>
+<!-- Background Decoration (Subtle Fashion Aesthetics) -->
+<div class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none opacity-40">
+<div class="absolute top-[-10%] right-[-5%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]"></div>
+</div>
+<script src="nav.js"></script></body></html>

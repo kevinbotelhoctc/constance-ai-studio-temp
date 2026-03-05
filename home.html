@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec13b6",
+                        "background-light": "#f8f6f8",
+                        "background-dark": "#22101d",
+                        "mauve-deep": "#4a1d3d",
+                        "mauve-soft": "#f4f0f3",
+                        "accent-gold": "#d4af37"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Constance AI Studio - Meus Posts</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex">
+<aside class="group fixed left-0 top-0 h-full w-20 hover:w-64 bg-white dark:bg-background-dark border-r border-primary/10 transition-all duration-300 z-[60] flex flex-col items-center py-8 overflow-hidden" id="sidebar">
+<div class="mb-10">
+<div class="bg-primary p-2 rounded-lg">
+<svg class="w-6 h-6 text-white" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+</div>
+</div>
+<nav class="flex-1 w-full px-4 space-y-2">
+<a class="flex items-center gap-4 p-3 rounded-xl bg-primary/10 text-primary transition-all" href="#">
+<span class="material-symbols-outlined font-fill">home</span>
+<span class="font-bold text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Meus Posts</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-xl text-slate-400 hover:bg-primary/5 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-bold text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Criar Post</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-xl text-slate-400 hover:bg-primary/5 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">visibility</span>
+<span class="font-bold text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Preview do Post</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-xl text-slate-400 hover:bg-primary/5 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-bold text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Perfil</span>
+</a>
+</nav>
+<div class="mt-auto">
+<button class="p-3 rounded-xl text-slate-400 hover:text-primary transition-all">
+<span class="material-symbols-outlined">logout</span>
+</button>
+</div>
+</aside>
+<div class="flex-1 ml-20 transition-all duration-300">
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-6 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<h1 class="text-xl font-extrabold tracking-tight text-mauve-deep dark:text-primary hidden sm:block">Constance <span class="font-light text-slate-400">AI Studio</span></h1>
+<div class="flex items-center gap-6 ml-auto">
+<button class="relative p-2 text-mauve-deep dark:text-slate-300 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full border-2 border-white dark:border-background-dark"></span>
+</button>
+<div class="flex items-center gap-3 border-l border-primary/10 pl-6">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-bold text-mauve-deep dark:text-slate-100">Ana Beatriz</p>
+<p class="text-xs text-primary font-medium">Plano Premium</p>
+</div>
+<div class="size-10 rounded-full ring-2 ring-primary/20 overflow-hidden bg-mauve-soft">
+<img class="w-full h-full object-cover" data-alt="Profile photo of a professional woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWzK13Kw-9QYv8A5gvAPIJSQHfrhB6mNlfEyJKuAsz8CgobNbpkNIrCTY2gSxBew7selzIX-dT-vsXD-D5epE83eBYxwb5DM6vnw36_ExXM9XLedveCOgtJU5BEGIBi96-xekwg2Eu6qukYJ6JD-21kZaKN45zzpX0ho6HfsxsBPIAgbBfQOGr_pZuUedLvKgOTxU75-ZcwGaOaJIcK8TU_urw7e8uBAxc2AL7_BMU4UVrjcXzCkhVGT1DaqpBZOz9uaDcLlc__HQ"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-8">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-mauve-deep dark:text-slate-100 mb-6">Meus Posts</h2>
+<div class="flex border-b border-primary/10 gap-8 overflow-x-auto no-scrollbar">
+<button class="flex items-center gap-2 border-b-2 border-primary pb-4 px-1 group">
+<span class="text-sm font-bold text-primary">Aprovados</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-bold">12</span>
+</button>
+<button class="flex items-center gap-2 border-b-2 border-transparent pb-4 px-1 group hover:border-primary/30 transition-all">
+<span class="text-sm font-bold text-slate-500 dark:text-slate-400 group-hover:text-mauve-deep dark:group-hover:text-slate-200">Pendentes</span>
+<span class="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 text-xs font-bold">5</span>
+</button>
+<button class="flex items-center gap-2 border-b-2 border-transparent pb-4 px-1 group hover:border-primary/30 transition-all">
+<span class="text-sm font-bold text-slate-500 dark:text-slate-400 group-hover:text-mauve-deep dark:group-hover:text-slate-200">Recusados</span>
+<span class="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 text-xs font-bold">2</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group bg-white dark:bg-slate-900/50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-primary/5">
+<div class="relative aspect-[16/9] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9hDFZ2h5Jy2bNMRxAvODw21ZeIimRNt8i-FhjDALX3N3AlDCQwGXw2G6uA5s6OKuskdUt443PsJBmFEMwoLJh6gONt8p3ISEfuusHyVQuDqHa5NX440uccb7ZY97bTnWFZQhzA7DDWGD7kA4hlBn0LNt4lg3WsGMlpi_YwP-NLU8n4mPt9Ti3cKg-RckAodh6kU9lCVqMzznDT5kWTOBZ9v5wEJ-pMdXncJ7xkFTejuChoS4z784DkzRAidS-Mw6M0vcBAalN-xc"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider text-mauve-deep shadow-sm">Post Único</span>
+</div>
+</div>
+<div class="p-5 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-bold text-mauve-deep dark:text-slate-100 leading-tight">Campanha Sandália Minimalista</h3>
+<span class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                                Aprovado
+                            </span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Gerado para Instagram Feed • 1080x1350px</p>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-primary/5">
+<span class="text-xs text-slate-400">Solicitado em 24 Out, 2023</span>
+<button class="text-primary font-bold text-sm hover:underline flex items-center gap-1">
+                            Ver Detalhes <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-white dark:bg-slate-900/50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-primary/5">
+<div class="relative aspect-[16/9] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7GA2hnozvZywwDJ1eKbw3cZZjJM8wwcd6qUTulicOVP0oLPf_FHudXxpUq7n_rVGxCZm5Wdg56xTQTS0q42ip1fm8HVGLSFwzcOHFRr7D2M03eJvNnPJ-2AYcQF_jyYOKqD35KqQwoK2FfqGEi1_P96ATi9_CxeFJRE2CWJIV3i6jbZPPRER-2fF9YI71EV9X-xeXva-PJOLibjfbyghUknT6E4wgQ8XNSl8joEqqCr7EB-kHgFmAdQCMJ-WKplpiEHFzDuE7cBY"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider text-mauve-deep shadow-sm">Carrossel</span>
+</div>
+</div>
+<div class="p-5 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-bold text-mauve-deep dark:text-slate-100 leading-tight">Coleção Primavera Urbana</h3>
+<span class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 text-amber-700 text-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                                Pendente
+                            </span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Gerado para LinkedIn • 1200x627px</p>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-primary/5">
+<span class="text-xs text-slate-400">Solicitado em 25 Out, 2023</span>
+<button class="text-primary font-bold text-sm hover:underline flex items-center gap-1">
+                            Ver Detalhes <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-white dark:bg-slate-900/50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-primary/5">
+<div class="relative aspect-[16/9] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDox1jqBp7p01fXkWGV200HNeNU3KCY_eSe4KEODp_fajpHMgVyaIiNSiEk6QH71YqT4hJogjZ3xTn1LfdTgU-rFMmyzbmyJDX_dHWSCuCpkAJsko8jRD1aov2_JF-Fr2Mu-aUB7TqqoTgq16EcvNxxHRtTOEIFso08svlsgMJvQ2PRikDD7NunN_yjYGiUUenFs77SBvqF9fHkdy7WYGPFT0xQ0VVLuEnSmOZyNM3b1JSM5ViHZcDdLDG_5YRKl_htMji_XTZtpE"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider text-mauve-deep shadow-sm">Story</span>
+</div>
+</div>
+<div class="p-5 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-bold text-mauve-deep dark:text-slate-100 leading-tight">Editorial High-Fashion</h3>
+<span class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                                Aprovado
+                            </span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Gerado para Instagram Stories • 1080x1920px</p>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-primary/5">
+<span class="text-xs text-slate-400">Solicitado em 23 Out, 2023</span>
+<button class="text-primary font-bold text-sm hover:underline flex items-center gap-1">
+                            Ver Detalhes <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-white dark:bg-slate-900/50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-primary/5">
+<div class="relative aspect-[16/9] overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-60 group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgZW1wfKgcOTRxfLYd38Y90x0u7ZXlUeNTXk8KNs1cTGymBZ5Wtqo535sKn3BEwrBolcmKCe83lmIWmkgrHoMF1fi8q0xuqrmO8KzZI2eilKoe4S8P100j381c121QrvfqaYXOv-RwgquRJ4d4GcBHgHXBy09DI-fjYk9LtT-rPpjGlnT0sfKOdo5QfI_fCG9cdXiZtAl48TK0AGT8w4aB_gvxLFz3ysXOQEEZ4RuWtq3tsEujBkKNk6jYAYIEJX2w0vsSIDQeRaw"/>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider text-mauve-deep shadow-sm">Post Único</span>
+</div>
+</div>
+<div class="p-5 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-bold text-slate-400 dark:text-slate-500 leading-tight">Lançamento Activewear</h3>
+<span class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
+                                Recusado
+                            </span>
+</div>
+<p class="text-slate-400 dark:text-slate-500 text-sm mb-4">Gerado para Facebook Ads • 1200x1200px</p>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-primary/5">
+<span class="text-xs text-slate-400">Solicitado em 22 Out, 2023</span>
+<button class="text-slate-400 font-bold text-sm hover:text-primary transition-colors flex items-center gap-1">
+                            Ver Motivo <span class="material-symbols-outlined text-sm">info</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<style>
+    .font-fill {
+        font-variation-settings: 'FILL' 1;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    /* Sidebar push effect */
+    #sidebar:hover + div {
+        margin-left: 16rem;
+    }
+</style>
+<script src="nav.js"></script></body></html>
