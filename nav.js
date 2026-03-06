@@ -65,6 +65,28 @@
                 });
                 if (el.tagName === 'A') el.href = dest;
             }
+
+            // Aplicar estilo de aba ATIVA dinamicamente
+            let isActive = false;
+            if (page === 'home.html' && dest === 'home.html') isActive = true;
+            if (page === 'criar-post.html' && dest === 'criar-post.html') isActive = true;
+            if (page === 'preview.html' && dest === 'preview.html') isActive = true;
+            if (page === 'perfil.html' && dest === 'perfil.html') isActive = true;
+
+            if (isActive) {
+                // Adiciona visual rosa marcado
+                el.classList.remove('text-slate-400', 'hover:bg-primary/5', 'hover:text-primary');
+                el.classList.add('bg-primary/10', 'text-primary');
+                icon.classList.add('font-fill');
+            } else {
+                // Remove visual rosa e deixa cinza
+                el.classList.remove('bg-primary/10', 'text-primary');
+                if (dest !== 'index.html') {
+                    // Cuidado pra não mexer em ícones sem link
+                    el.classList.add('text-slate-400', 'hover:bg-primary/5', 'hover:text-primary');
+                    icon.classList.remove('font-fill');
+                }
+            }
         });
     }
 
