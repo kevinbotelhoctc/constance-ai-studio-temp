@@ -46,37 +46,71 @@
         }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-charcoal">
-<div class="flex h-screen overflow-hidden">
-<!-- Sidebar Collapsed -->
-<aside class="w-20 bg-[#1a1028] flex flex-col items-center py-8 gap-8 border-r border-white/5">
-<div class="mb-4">
-<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
-<span class="material-symbols-outlined font-bold">diamond</span>
-</div>
-</div>
-<nav class="flex flex-col gap-6">
-<button class="p-3 rounded-xl text-slate-400 hover:text-white transition-colors">
-<span class="material-symbols-outlined text-[28px]">home</span>
-</button>
-<button class="p-3 rounded-xl active-icon text-primary transition-colors">
-<span class="material-symbols-outlined text-[28px] fill-1">auto_awesome</span>
-</button>
-<button class="p-3 rounded-xl text-slate-400 hover:text-white transition-colors">
-<span class="material-symbols-outlined text-[28px]">analytics</span>
-</button>
-<button class="p-3 rounded-xl text-slate-400 hover:text-white transition-colors">
-<span class="material-symbols-outlined text-[28px]">calendar_month</span>
-</button>
-</nav>
-<div class="mt-auto">
-<button class="p-3 rounded-full text-slate-400 hover:text-white transition-colors">
-<span class="material-symbols-outlined text-[28px]">account_circle</span>
-</button>
-</div>
-</aside>
-<!-- Main Content Area -->
-<main class="flex-1 overflow-y-auto p-8 space-y-8">
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex">
+    <aside
+        class="fixed left-0 top-0 h-full w-64 bg-white dark:bg-background-dark border-r border-primary/10 transition-all duration-300 z-[60] flex flex-col py-8 overflow-hidden"
+        id="sidebar">
+        <div class="mb-4 px-6 pt-2">
+            <!-- Logo removida a pedido do usuário -->
+        </div>
+        <nav class="flex-1 w-full px-4 space-y-2">
+            <a class="flex items-center gap-4 p-3 rounded-xl bg-primary/10 text-primary transition-all relative"
+                href="#">
+                <span class="material-symbols-outlined font-fill flex-shrink-0">home</span>
+                <span class="font-bold text-sm whitespace-nowrap opacity-100 transition-opacity">Meus Posts</span>
+            </a>
+            <a class="flex items-center gap-4 p-3 rounded-xl text-slate-400 hover:bg-primary/5 hover:text-primary transition-all relative"
+                href="#">
+                <span class="material-symbols-outlined flex-shrink-0">auto_awesome</span>
+                <span class="font-bold text-sm whitespace-nowrap opacity-100 transition-opacity">Criar Post</span>
+            </a>
+            <a class="flex items-center gap-4 p-3 rounded-xl text-slate-400 hover:bg-primary/5 hover:text-primary transition-all relative"
+                href="#">
+                <span class="material-symbols-outlined flex-shrink-0">visibility</span>
+                <span class="font-bold text-sm whitespace-nowrap opacity-100 transition-opacity">Preview do Post</span>
+            </a>
+            <a class="flex items-center gap-4 p-3 rounded-xl text-slate-400 hover:bg-primary/5 hover:text-primary transition-all relative"
+                href="#">
+                <span class="material-symbols-outlined flex-shrink-0">account_circle</span>
+                <span class="font-bold text-sm whitespace-nowrap opacity-100 transition-opacity">Perfil</span>
+            </a>
+        </nav>
+        <div class="mt-auto px-4 w-full">
+            <button
+                class="flex items-center gap-4 p-3 w-full rounded-xl text-slate-400 hover:text-primary transition-all">
+                <span class="material-symbols-outlined flex-shrink-0">logout</span>
+                <span class="font-bold text-sm whitespace-nowrap opacity-100 transition-opacity">Sair</span>
+            </button>
+        </div>
+    </aside>
+    <div class="flex-1 ml-64 transition-all duration-300 flex flex-col min-h-screen">
+        <header
+            class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-6 py-4">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <h1 class="text-xl font-extrabold tracking-tight text-mauve-deep dark:text-primary hidden sm:block">
+                    Constance <span class="font-light text-slate-400">AI Studio</span></h1>
+                <div class="flex items-center gap-6 ml-auto">
+                    <button
+                        class="relative p-2 text-mauve-deep dark:text-slate-300 hover:bg-primary/10 rounded-full transition-colors">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span
+                            class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full border-2 border-white dark:border-background-dark"></span>
+                    </button>
+                    <div class="flex items-center gap-3 border-l border-primary/10 pl-6">
+                        <div class="text-right hidden sm:block">
+                            <p class="text-sm font-bold text-mauve-deep dark:text-slate-100">Ana Beatriz</p>
+                            <p class="text-xs text-primary font-medium">Plano Premium</p>
+                        </div>
+                        <div class="size-10 rounded-full ring-2 ring-primary/20 overflow-hidden bg-mauve-soft">
+                            <img class="w-full h-full object-cover" data-alt="Profile photo of a professional woman"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWzK13Kw-9QYv8A5gvAPIJSQHfrhB6mNlfEyJKuAsz8CgobNbpkNIrCTY2gSxBew7selzIX-dT-vsXD-D5epE83eBYxwb5DM6vnw36_ExXM9XLedveCOgtJU5BEGIBi96-xekwg2Eu6qukYJ6JD-21kZaKN45zzpX0ho6HfsxsBPIAgbBfQOGr_pZuUedLvKgOTxU75-ZcwGaOaJIcK8TU_urw7e8uBAxc2AL7_BMU4UVrjcXzCkhVGT1DaqpBZOz9uaDcLlc__HQ" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="w-full max-w-7xl mx-auto px-6 py-8 space-y-8">
+            
 <!-- Page Header -->
 <header class="max-w-5xl mx-auto flex justify-between items-end">
 <div>
@@ -218,6 +252,8 @@
 <span class="text-lg font-extrabold tracking-wide uppercase">Gerar Post</span>
 </button>
 </div>
-</main>
-</div>
+
+        </main>
+    </div>
+    <script src="nav.js"></script>
 </body></html>
