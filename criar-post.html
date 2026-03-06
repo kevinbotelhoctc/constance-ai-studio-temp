@@ -1,14 +1,19 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-<html lang="pt-BR"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Constance AI - Criar Post</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Constance AI - Criar Post</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -33,191 +38,229 @@
             },
         }
     </script>
-<style>
+    <style>
         body {
             font-family: 'Manrope', sans-serif;
         }
+
         .sidebar-item:hover {
             background-color: rgba(236, 19, 182, 0.1);
         }
+
         .active-icon {
             color: #ec13b6;
             background-color: rgba(236, 19, 182, 0.15);
         }
     </style>
 </head>
+
 <body class="bg-background-light dark:bg-background-dark font-display text-charcoal">
-<div class="flex h-screen overflow-hidden">
-<!-- Sidebar Collapsed -->
-<aside class="w-20 bg-[#1a1028] flex flex-col items-center py-8 gap-8 border-r border-white/5">
-<div class="mb-4">
-<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
-<span class="material-symbols-outlined font-bold">diamond</span>
-</div>
-</div>
-<nav class="flex flex-col gap-6">
-<button class="p-3 rounded-xl text-slate-400 hover:text-white transition-colors">
-<span class="material-symbols-outlined text-[28px]">home</span>
-</button>
-<button class="p-3 rounded-xl active-icon text-primary transition-colors">
-<span class="material-symbols-outlined text-[28px] fill-1">auto_awesome</span>
-</button>
-<button class="p-3 rounded-xl text-slate-400 hover:text-white transition-colors">
-<span class="material-symbols-outlined text-[28px]">analytics</span>
-</button>
-<button class="p-3 rounded-xl text-slate-400 hover:text-white transition-colors">
-<span class="material-symbols-outlined text-[28px]">calendar_month</span>
-</button>
-</nav>
-<div class="mt-auto">
-<button class="p-3 rounded-full text-slate-400 hover:text-white transition-colors">
-<span class="material-symbols-outlined text-[28px]">account_circle</span>
-</button>
-</div>
-</aside>
-<!-- Main Content Area -->
-<main class="flex-1 overflow-y-auto p-8 space-y-8">
-<!-- Page Header -->
-<header class="max-w-5xl mx-auto flex justify-between items-end">
-<div>
-<h1 class="text-4xl font-extrabold text-charcoal tracking-tight">Criar Post</h1>
-<p class="text-slate-gray mt-2 text-lg">Configure seu post para Instagram com inteligência artificial</p>
-</div>
-<div class="flex gap-3">
-<button class="px-6 py-2.5 rounded-full border border-slate-300 font-semibold text-charcoal bg-white hover:bg-slate-50 transition-colors">Rascunhos</button>
-</div>
-</header>
-<div class="max-w-5xl mx-auto space-y-6 pb-24">
-<!-- Section 1: Objetivo -->
-<section class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
-<h2 class="text-xl font-bold mb-5 flex items-center gap-2">
-<span class="w-1.5 h-6 bg-primary rounded-full"></span>
-                        Objetivo
-                    </h2>
-<div class="grid grid-cols-5 gap-4">
-<button class="flex flex-col items-center gap-3 p-4 rounded-xl border-2 border-primary bg-primary/5 text-primary group transition-all">
-<span class="material-symbols-outlined text-3xl">favorite</span>
-<span class="text-sm font-bold">Engajamento</span>
-</button>
-<button class="flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
-<span class="material-symbols-outlined text-3xl">near_me</span>
-<span class="text-sm font-bold">Tráfego</span>
-</button>
-<button class="flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
-<span class="material-symbols-outlined text-3xl">shopping_bag</span>
-<span class="text-sm font-bold">Vendas</span>
-</button>
-<button class="flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
-<span class="material-symbols-outlined text-3xl">visibility</span>
-<span class="text-sm font-bold">Lembrança</span>
-</button>
-<button class="flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
-<span class="material-symbols-outlined text-3xl">rocket_launch</span>
-<span class="text-sm font-bold">Lançamento</span>
-</button>
-</div>
-</section>
-<!-- Section 2: Público / Tema -->
-<section class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
-<h2 class="text-xl font-bold mb-5 flex items-center gap-2">
-<span class="w-1.5 h-6 bg-primary rounded-full"></span>
-                        Público / Tema
-                    </h2>
-<div class="grid grid-cols-5 gap-4">
-<button class="flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
-<span class="material-symbols-outlined text-3xl">alarm</span>
-<span class="text-sm font-bold">Urgência</span>
-</button>
-<button class="flex flex-col items-center gap-3 p-4 rounded-xl border-2 border-primary bg-primary/5 text-primary transition-all">
-<span class="material-symbols-outlined text-3xl">sell</span>
-<span class="text-sm font-bold">Promoção</span>
-</button>
-<button class="flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
-<span class="material-symbols-outlined text-3xl">new_releases</span>
-<span class="text-sm font-bold">Produtos Novos</span>
-</button>
-<button class="flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
-<span class="material-symbols-outlined text-3xl">event</span>
-<span class="text-sm font-bold">Datas</span>
-</button>
-<button class="flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
-<span class="material-symbols-outlined text-3xl">photo_camera</span>
-<span class="text-sm font-bold">Lifestyle</span>
-</button>
-</div>
-</section>
-<!-- Section 3: Estilo de Linguagem -->
-<section class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
-<h2 class="text-xl font-bold mb-5 flex items-center gap-2">
-<span class="w-1.5 h-6 bg-primary rounded-full"></span>
-                        Estilo de Linguagem
-                    </h2>
-<div class="grid grid-cols-4 gap-4">
-<button class="flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
-<span class="material-symbols-outlined text-2xl text-primary">psychology</span>
-<span class="text-sm font-bold">Gatilhos Emocionais</span>
-</button>
-<button class="flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
-<span class="material-symbols-outlined text-2xl text-primary">campaign</span>
-<span class="text-sm font-bold">Persuasiva</span>
-</button>
-<button class="flex items-center gap-4 p-4 rounded-xl border-2 border-primary bg-primary/5 text-primary transition-all">
-<span class="material-symbols-outlined text-2xl">auto_fix_high</span>
-<span class="text-sm font-bold">Encantadora</span>
-</button>
-<button class="flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
-<span class="material-symbols-outlined text-2xl text-primary">info</span>
-<span class="text-sm font-bold">Informativa</span>
-</button>
-</div>
-</section>
-<!-- Section 4: Formato do Post -->
-<section class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
-<h2 class="text-xl font-bold mb-5 flex items-center gap-2">
-<span class="w-1.5 h-6 bg-primary rounded-full"></span>
-                        Formato do Post
-                    </h2>
-<div class="grid grid-cols-3 gap-6">
-<button class="group flex flex-col items-center justify-center gap-4 p-8 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all">
-<div class="w-24 h-24 border-2 border-dashed border-slate-300 rounded group-hover:border-primary/50 flex items-center justify-center">
-<span class="material-symbols-outlined text-4xl text-slate-300 group-hover:text-primary/50">crop_square</span>
-</div>
-<div class="text-center">
-<span class="block text-sm font-bold text-slate-700">Post Único</span>
-<span class="text-xs text-slate-400">1:1 Square</span>
-</div>
-</button>
-<button class="group flex flex-col items-center justify-center gap-4 p-8 rounded-xl border-2 border-primary bg-primary/5 transition-all">
-<div class="flex gap-1">
-<div class="w-16 h-24 border-2 border-primary rounded flex items-center justify-center">
-<span class="material-symbols-outlined text-2xl text-primary">view_carousel</span>
-</div>
-<div class="w-4 h-24 border-2 border-primary/20 rounded-r"></div>
-</div>
-<div class="text-center">
-<span class="block text-sm font-bold text-primary">Carrossel</span>
-<span class="text-xs text-primary/60">4:5 Vertical</span>
-</div>
-</button>
-<button class="group flex flex-col items-center justify-center gap-4 p-8 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all">
-<div class="w-16 h-28 border-2 border-dashed border-slate-300 rounded group-hover:border-primary/50 flex items-center justify-center">
-<span class="material-symbols-outlined text-4xl text-slate-300 group-hover:text-primary/50">smartphone</span>
-</div>
-<div class="text-center">
-<span class="block text-sm font-bold text-slate-700">Story</span>
-<span class="text-xs text-slate-400">9:16 Full Screen</span>
-</div>
-</button>
-</div>
-</section>
-</div>
-<!-- Footer Fixed Button Area -->
-<div class="fixed bottom-0 left-20 right-0 h-24 bg-gradient-to-t from-background-light via-background-light/90 to-transparent flex items-center justify-center pointer-events-none">
-<button class="pointer-events-auto flex items-center gap-3 px-12 py-5 bg-primary hover:bg-primary/90 text-white rounded-full shadow-2xl shadow-primary/40 transform hover:scale-105 transition-all group">
-<span class="material-symbols-outlined fill-1 animate-pulse">auto_awesome</span>
-<span class="text-lg font-extrabold tracking-wide uppercase">Gerar Post</span>
-</button>
-</div>
-</main>
-</div>
-<script src="nav.js"></script></body></html>
+    <div class="flex h-screen overflow-hidden">
+        <aside class="w-20 bg-[#1a1028] flex flex-col items-center py-8 gap-8 border-r border-white/5 z-20">
+            <div class="mb-4">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+                    <span class="material-symbols-outlined font-bold">diamond</span>
+                </div>
+            </div>
+            <nav class="flex flex-col gap-6">
+                <button class="p-3 rounded-xl text-slate-400 hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-[28px]">home</span>
+                </button>
+                <button class="p-3 rounded-xl active-icon text-primary transition-colors">
+                    <span class="material-symbols-outlined text-[28px] fill-1">auto_awesome</span>
+                </button>
+            </nav>
+            <div class="mt-auto">
+                <button class="p-3 rounded-full text-slate-400 hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-[28px]">account_circle</span>
+                </button>
+            </div>
+        </aside>
+        <div class="flex-1 flex flex-col h-screen overflow-hidden relative">
+            <header
+                class="h-20 bg-white/80 backdrop-blur-md border-b border-slate-200 flex items-center justify-between px-8 sticky top-0 z-10">
+                <div class="flex items-center gap-3">
+                    <span class="text-xl font-extrabold text-[#1a1028] tracking-tight">Constance AI Studio</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="text-right hidden sm:block">
+                        <p class="text-sm font-bold text-[#1d1d1f]">Mariana Silva</p>
+                        <p class="text-xs text-[#6e6e73]">Franqueada</p>
+                    </div>
+                    <div
+                        class="w-10 h-10 rounded-full bg-[#ec13b6]/10 flex items-center justify-center text-[#ec13b6] border border-[#ec13b6]/20">
+                        <span class="text-sm font-bold">MS</span>
+                    </div>
+                </div>
+            </header>
+            <main class="flex-1 overflow-y-auto p-8 space-y-8 pb-32">
+                <div class="max-w-5xl mx-auto flex justify-between items-end">
+                    <div>
+                        <h1 class="text-4xl font-extrabold text-charcoal tracking-tight">Criar Post</h1>
+                        <p class="text-slate-gray mt-2 text-lg">Configure seu post para Instagram com inteligência
+                            artificial</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <button
+                            class="px-6 py-2.5 rounded-full border border-slate-300 font-semibold text-charcoal bg-white hover:bg-slate-50 transition-colors">Rascunhos</button>
+                    </div>
+                </div>
+                <div class="max-w-5xl mx-auto space-y-6">
+                    <section class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+                        <h2 class="text-xl font-bold mb-5 flex items-center gap-2">
+                            <span class="w-1.5 h-6 bg-primary rounded-full"></span>
+                            Objetivo
+                        </h2>
+                        <div class="grid grid-cols-5 gap-4">
+                            <button
+                                class="flex flex-col items-center gap-3 p-4 rounded-xl border-2 border-primary bg-primary/5 text-primary group transition-all">
+                                <span class="material-symbols-outlined text-3xl">favorite</span>
+                                <span class="text-sm font-bold">Engajamento</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
+                                <span class="material-symbols-outlined text-3xl">near_me</span>
+                                <span class="text-sm font-bold">Tráfego</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
+                                <span class="material-symbols-outlined text-3xl">shopping_bag</span>
+                                <span class="text-sm font-bold">Vendas</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
+                                <span class="material-symbols-outlined text-3xl">visibility</span>
+                                <span class="text-sm font-bold">Lembrança</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
+                                <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+                                <span class="text-sm font-bold">Lançamento</span>
+                            </button>
+                        </div>
+                    </section>
+                    <section class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+                        <h2 class="text-xl font-bold mb-5 flex items-center gap-2">
+                            <span class="w-1.5 h-6 bg-primary rounded-full"></span>
+                            Público / Tema
+                        </h2>
+                        <div class="grid grid-cols-5 gap-4">
+                            <button
+                                class="flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
+                                <span class="material-symbols-outlined text-3xl">alarm</span>
+                                <span class="text-sm font-bold">Urgência</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center gap-3 p-4 rounded-xl border-2 border-primary bg-primary/5 text-primary transition-all">
+                                <span class="material-symbols-outlined text-3xl">sell</span>
+                                <span class="text-sm font-bold">Promoção</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
+                                <span class="material-symbols-outlined text-3xl">new_releases</span>
+                                <span class="text-sm font-bold">Produtos Novos</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
+                                <span class="material-symbols-outlined text-3xl">event</span>
+                                <span class="text-sm font-bold">Datas</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
+                                <span class="material-symbols-outlined text-3xl">photo_camera</span>
+                                <span class="text-sm font-bold">Lifestyle</span>
+                            </button>
+                        </div>
+                    </section>
+                    <section class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+                        <h2 class="text-xl font-bold mb-5 flex items-center gap-2">
+                            <span class="w-1.5 h-6 bg-primary rounded-full"></span>
+                            Estilo de Linguagem
+                        </h2>
+                        <div class="grid grid-cols-4 gap-4">
+                            <button
+                                class="flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
+                                <span class="material-symbols-outlined text-2xl text-primary">psychology</span>
+                                <span class="text-sm font-bold">Gatilhos Emocionais</span>
+                            </button>
+                            <button
+                                class="flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
+                                <span class="material-symbols-outlined text-2xl text-primary">campaign</span>
+                                <span class="text-sm font-bold">Persuasiva</span>
+                            </button>
+                            <button
+                                class="flex items-center gap-4 p-4 rounded-xl border-2 border-primary bg-primary/5 text-primary transition-all">
+                                <span class="material-symbols-outlined text-2xl">auto_fix_high</span>
+                                <span class="text-sm font-bold">Encantadora</span>
+                            </button>
+                            <button
+                                class="flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all text-slate-600">
+                                <span class="material-symbols-outlined text-2xl text-primary">info</span>
+                                <span class="text-sm font-bold">Informativa</span>
+                            </button>
+                        </div>
+                    </section>
+                    <section class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+                        <h2 class="text-xl font-bold mb-5 flex items-center gap-2">
+                            <span class="w-1.5 h-6 bg-primary rounded-full"></span>
+                            Formato do Post
+                        </h2>
+                        <div class="grid grid-cols-3 gap-6">
+                            <button
+                                class="group flex flex-col items-center justify-center gap-4 p-8 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all">
+                                <div
+                                    class="w-24 h-24 border-2 border-dashed border-slate-300 rounded group-hover:border-primary/50 flex items-center justify-center">
+                                    <span
+                                        class="material-symbols-outlined text-4xl text-slate-300 group-hover:text-primary/50">crop_square</span>
+                                </div>
+                                <div class="text-center">
+                                    <span class="block text-sm font-bold text-slate-700">Post Único</span>
+                                    <span class="text-xs text-slate-400">1:1 Square</span>
+                                </div>
+                            </button>
+                            <button
+                                class="group flex flex-col items-center justify-center gap-4 p-8 rounded-xl border-2 border-primary bg-primary/5 transition-all">
+                                <div class="flex gap-1">
+                                    <div
+                                        class="w-16 h-24 border-2 border-primary rounded flex items-center justify-center">
+                                        <span
+                                            class="material-symbols-outlined text-2xl text-primary">view_carousel</span>
+                                    </div>
+                                    <div class="w-4 h-24 border-2 border-primary/20 rounded-r"></div>
+                                </div>
+                                <div class="text-center">
+                                    <span class="block text-sm font-bold text-primary">Carrossel</span>
+                                    <span class="text-xs text-primary/60">4:5 Vertical</span>
+                                </div>
+                            </button>
+                            <button
+                                class="group flex flex-col items-center justify-center gap-4 p-8 rounded-xl border border-slate-100 hover:border-primary/30 hover:bg-slate-50 transition-all">
+                                <div
+                                    class="w-16 h-28 border-2 border-dashed border-slate-300 rounded group-hover:border-primary/50 flex items-center justify-center">
+                                    <span
+                                        class="material-symbols-outlined text-4xl text-slate-300 group-hover:text-primary/50">smartphone</span>
+                                </div>
+                                <div class="text-center">
+                                    <span class="block text-sm font-bold text-slate-700">Story</span>
+                                    <span class="text-xs text-slate-400">9:16 Full Screen</span>
+                                </div>
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <div
+                class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background-light via-background-light/90 to-transparent flex items-center justify-center pointer-events-none z-10">
+                <button
+                    class="pointer-events-auto flex items-center gap-3 px-12 py-5 bg-primary hover:bg-primary/90 text-white rounded-full shadow-2xl shadow-primary/40 transform hover:scale-105 transition-all group">
+                    <span class="material-symbols-outlined fill-1 animate-pulse">auto_awesome</span>
+                    <span class="text-lg font-extrabold tracking-wide uppercase">Gerar Post</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="nav.js"></script>
+</body>
+
+</html>
