@@ -1,46 +1,56 @@
 ﻿<!DOCTYPE html>
 
-<html class="light" lang="pt-br"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary": "#ec13b6",
-              "background-light": "#f8f6f8",
-              "background-dark": "#22101d",
-              "deep-purple": "#1a1028",
-              "cloud-gray": "#f5f5f7",
-              "warm-charcoal": "#1d1d1f",
-              "cool-slate": "#6e6e73",
-              "gentle-mist": "#e5e5e7",
-              "soft-blush": "#fce4f4"
+<html class="light" lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec13b6",
+                        "background-light": "#f8f6f8",
+                        "background-dark": "#22101d",
+                        "deep-purple": "#1a1028",
+                        "cloud-gray": "#f5f5f7",
+                        "warm-charcoal": "#1d1d1f",
+                        "cool-slate": "#6e6e73",
+                        "gentle-mist": "#e5e5e7",
+                        "soft-blush": "#fce4f4"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
             },
-            fontFamily: {
-              "display": ["Manrope", "sans-serif"]
-            },
-            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
-          },
-        },
-      }
+        }
     </script>
-<style>
+    <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
         body {
             font-family: 'Manrope', sans-serif;
         }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex">
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex">
     <aside
         class="fixed left-0 top-0 h-full w-64 bg-white dark:bg-background-dark border-r border-primary/10 transition-all duration-300 z-[60] flex flex-col py-8 overflow-hidden"
         id="sidebar">
@@ -104,87 +114,103 @@
             </div>
         </header>
         <main class="w-full max-w-7xl mx-auto px-6 py-8 space-y-8">
-            
-<!-- Header Section -->
-<header class="mb-10 max-w-4xl mx-auto">
-<h1 class="text-4xl font-extrabold text-warm-charcoal dark:text-white tracking-tight">Preview do Post</h1>
-<p class="text-cool-slate dark:text-slate-400 text-lg mt-2">Confira o resultado gerado pela IA</p>
-</header>
-<!-- Preview Card Container -->
-<section class="max-w-4xl mx-auto flex flex-col items-center">
-<!-- Main Preview Card -->
-<div class="w-full max-w-[540px] bg-white dark:bg-slate-900 rounded-xl shadow-xl shadow-black/5 border border-gentle-mist dark:border-white/10 overflow-hidden">
-<!-- Instagram Top Header Mockup -->
-<div class="p-4 flex items-center gap-3">
-<div class="size-8 rounded-full bg-gradient-to-tr from-primary to-fuchsia-300 p-[2px]">
-<div class="w-full h-full rounded-full bg-white flex items-center justify-center">
-<div class="size-6 rounded-full bg-gray-200 overflow-hidden">
-<img alt="Logo Constance" class="w-full h-full object-cover" data-alt="Official brand logo for Constance shoes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3G-7L2I4DIz74HEqRhYrdsqsh0bmYcjz-v1GfpAnCeshf9caDKvjtilMd41FN5oPunRIe-RlYOeZ_iRQi9R4Gp63Edo5GmCULOqYW8BHDMG5ilFI2-VRffcZ51jKZBjxEAzouOQcMOT3SmOU3w5utg2Pi1JOYy9E2G34PPMo5MYbaSLkvKIFR3t2YHSZizDj0NNmiYON-LqujfUL2345hWnu7vmx4LuquVEUltgOd-bWLBYYtD1bsKhGNx6UjfXynzO4lZrokzmU"/>
-</div>
-</div>
-</div>
-<span class="text-sm font-bold">constance_calcados</span>
-<span class="material-symbols-outlined ml-auto text-cool-slate">more_horiz</span>
-</div>
-<!-- Post Image -->
-<div class="aspect-square w-full bg-gradient-to-br from-soft-blush to-primary/20 relative">
-<img alt="Shoe Product Image" class="w-full h-full object-cover" data-alt="High fashion women's luxury stiletto shoe on a pink gradient background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIbMmrOcn2r0jNJAaeoXh1xBkiYQ8Zdd657WawX8J35kh7KUIH8pgu_KHxETXzaCCfEexjMSqRcAn6K9sWQghNF3EzP_ChzGKj7FK2EQBK5CMLELCVQHn8UcSXkzaiq1NrMWHtH0ChjQXEdUfQ-IfH9GdL5LOa9zumHuKEr8pA6GL3CkKCIoN1cQWoXiG9EYHiAfmXBz4YWv6Iha9v0yaqG7p0YrwTFA-KuzkTBlF2rWPQzGrx0Qful0Mukw2axYkkCBUEIZlgJ1w"/>
-<!-- Carousel Indicators Overlay -->
-<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
-<div class="size-2 rounded-full bg-primary"></div>
-<div class="size-2 rounded-full bg-white/60"></div>
-<div class="size-2 rounded-full bg-white/60"></div>
-</div>
-</div>
-<!-- Post Content -->
-<div class="p-6">
-<!-- Interaction Bar Mockup -->
-<div class="flex items-center gap-4 mb-4">
-<span class="material-symbols-outlined">favorite</span>
-<span class="material-symbols-outlined">mode_comment</span>
-<span class="material-symbols-outlined">send</span>
-<span class="material-symbols-outlined ml-auto">bookmark</span>
-</div>
-<!-- Metadata Pills -->
-<div class="flex flex-wrap gap-2 mb-4">
-<span class="px-3 py-1 bg-soft-blush dark:bg-primary/20 text-primary rounded-full text-xs font-bold flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">aspect_ratio</span> Post Único • 1:1
-                        </span>
-<span class="px-3 py-1 bg-soft-blush dark:bg-primary/20 text-primary rounded-full text-xs font-bold">Vendas</span>
-<span class="px-3 py-1 bg-soft-blush dark:bg-primary/20 text-primary rounded-full text-xs font-bold">Promoção</span>
-</div>
-<!-- Caption Text -->
-<div class="space-y-2">
-<p class="text-sm leading-relaxed text-warm-charcoal dark:text-slate-200">
-<span class="font-bold">constance_calcados</span> Eleve seu estilo com o novo Scarpin Verniz. ✨ Design exclusivo e o conforto que você já conhece. Perfeito para momentos que pedem sofisticação. 
-                        </p>
-<p class="text-sm text-primary font-medium">
-                            #ConstanceShoes #FashionForward #NewArrivals #LuxuryFootwear
-                        </p>
-</div>
-<!-- Time Metadata -->
-<p class="text-[10px] text-cool-slate uppercase mt-4 tracking-wider">Publicação sugerida: Amanhã às 10:00</p>
-</div>
-</div>
-<!-- Action Buttons -->
-<div class="mt-12 flex flex-col md:flex-row gap-4 w-full max-w-[540px]">
-<button class="flex-1 h-14 bg-primary text-white rounded-full font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-lg shadow-primary/20">
-<span class="material-symbols-outlined">send</span>
-                    Enviar para Aprovação
-                </button>
-<button class="flex-1 h-14 bg-transparent border-2 border-primary text-primary rounded-full font-bold flex items-center justify-center gap-2 hover:bg-primary/5 transition-all">
-<span class="material-symbols-outlined">refresh</span>
-                    Gerar Novamente
-                </button>
-</div>
-<!-- Disclaimer -->
-<div class="mt-6 flex items-center gap-2 text-cool-slate dark:text-slate-400 text-sm">
-<span class="material-symbols-outlined text-[18px]">info</span>
-<p>Seu post será revisado pela equipe Constance antes de ser liberado.</p>
-</div>
-</section>
+
+            <!-- Header Section -->
+            <header class="mb-10 max-w-4xl mx-auto">
+                <h1 class="text-4xl font-extrabold text-warm-charcoal dark:text-white tracking-tight">Preview do Post
+                </h1>
+                <p class="text-cool-slate dark:text-slate-400 text-lg mt-2">Confira o resultado gerado pela IA</p>
+            </header>
+            <!-- Preview Card Container -->
+            <section class="max-w-4xl mx-auto flex flex-col items-center">
+                <!-- Main Preview Card -->
+                <div
+                    class="w-full max-w-[540px] bg-white dark:bg-slate-900 rounded-xl shadow-xl shadow-black/5 border border-gentle-mist dark:border-white/10 overflow-hidden">
+                    <!-- Instagram Top Header Mockup -->
+                    <div class="p-4 flex items-center gap-3">
+                        <div class="size-8 rounded-full bg-gradient-to-tr from-primary to-fuchsia-300 p-[2px]">
+                            <div class="w-full h-full rounded-full bg-white flex items-center justify-center">
+                                <div class="size-6 rounded-full bg-gray-200 overflow-hidden">
+                                    <img alt="Logo Constance" class="w-full h-full object-cover"
+                                        data-alt="Official brand logo for Constance shoes"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3G-7L2I4DIz74HEqRhYrdsqsh0bmYcjz-v1GfpAnCeshf9caDKvjtilMd41FN5oPunRIe-RlYOeZ_iRQi9R4Gp63Edo5GmCULOqYW8BHDMG5ilFI2-VRffcZ51jKZBjxEAzouOQcMOT3SmOU3w5utg2Pi1JOYy9E2G34PPMo5MYbaSLkvKIFR3t2YHSZizDj0NNmiYON-LqujfUL2345hWnu7vmx4LuquVEUltgOd-bWLBYYtD1bsKhGNx6UjfXynzO4lZrokzmU" />
+                                </div>
+                            </div>
+                        </div>
+                        <span class="text-sm font-bold">constance_calcados</span>
+                        <span class="material-symbols-outlined ml-auto text-cool-slate">more_horiz</span>
+                    </div>
+                    <!-- Post Image -->
+                    <div class="aspect-square w-full bg-gradient-to-br from-soft-blush to-primary/20 relative">
+                        <img alt="Shoe Product Image" class="w-full h-full object-cover"
+                            data-alt="High fashion women's luxury stiletto shoe on a pink gradient background"
+                            src="./5.png" />
+                        <!-- Carousel Indicators Overlay -->
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
+                            <div class="size-2 rounded-full bg-primary"></div>
+                            <div class="size-2 rounded-full bg-white/60"></div>
+                            <div class="size-2 rounded-full bg-white/60"></div>
+                        </div>
+                    </div>
+                    <!-- Post Content -->
+                    <div class="p-6">
+                        <!-- Interaction Bar Mockup -->
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="material-symbols-outlined">favorite</span>
+                            <span class="material-symbols-outlined">mode_comment</span>
+                            <span class="material-symbols-outlined">send</span>
+                            <span class="material-symbols-outlined ml-auto">bookmark</span>
+                        </div>
+                        <!-- Metadata Pills -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-soft-blush dark:bg-primary/20 text-primary rounded-full text-xs font-bold flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[14px]">aspect_ratio</span> Post Único • 1:1
+                            </span>
+                            <span
+                                class="px-3 py-1 bg-soft-blush dark:bg-primary/20 text-primary rounded-full text-xs font-bold">Vendas</span>
+                            <span
+                                class="px-3 py-1 bg-soft-blush dark:bg-primary/20 text-primary rounded-full text-xs font-bold">Promoção</span>
+                        </div>
+                        <!-- Caption Text -->
+                        <div class="space-y-2">
+                            <p class="text-sm leading-relaxed text-warm-charcoal dark:text-slate-200">
+                                <span class="font-bold">constance_calcados</span> Eleve seu estilo com o novo Scarpin
+                                Verniz. ✨ Design exclusivo e o conforto que você já conhece. Perfeito para momentos que
+                                pedem sofisticação.
+                            </p>
+                            <p class="text-sm text-primary font-medium">
+                                #ConstanceShoes #FashionForward #NewArrivals #LuxuryFootwear
+                            </p>
+                        </div>
+                        <!-- Time Metadata -->
+                        <p class="text-[10px] text-cool-slate uppercase mt-4 tracking-wider">Publicação sugerida: Amanhã
+                            às 10:00</p>
+                    </div>
+                </div>
+                <!-- Action Buttons -->
+                <div class="mt-12 flex flex-col md:flex-row gap-4 w-full max-w-[540px]">
+                    <button
+                        class="flex-1 h-14 bg-primary text-white rounded-full font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-lg shadow-primary/20">
+                        <span class="material-symbols-outlined">send</span>
+                        Enviar para Aprovação
+                    </button>
+                    <button
+                        class="flex-1 h-14 bg-transparent border-2 border-primary text-primary rounded-full font-bold flex items-center justify-center gap-2 hover:bg-primary/5 transition-all">
+                        <span class="material-symbols-outlined">refresh</span>
+                        Gerar Novamente
+                    </button>
+                </div>
+                <!-- Disclaimer -->
+                <div class="mt-6 flex items-center gap-2 text-cool-slate dark:text-slate-400 text-sm">
+                    <span class="material-symbols-outlined text-[18px]">info</span>
+                    <p>Seu post será revisado pela equipe Constance antes de ser liberado.</p>
+                </div>
+            </section>
 
         </main>
     </div>
     <script src="nav.js"></script>
-</body></html>
+</body>
+
+</html>
